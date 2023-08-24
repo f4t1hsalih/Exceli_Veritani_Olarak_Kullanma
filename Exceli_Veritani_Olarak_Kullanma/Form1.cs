@@ -12,6 +12,12 @@ namespace Exceli_Veritani_Olarak_Kullanma
 
         OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\Yazilim\\C#\\Exceli_Veritani_Olarak_Kullanma\\Exceli_Veritani_Olarak_Kullanma\\Belge.xlsx;Extended Properties='Excel 12.0 Xml;HDR=YES;'");
 
+        private void Temizle()
+        {
+            txtSaat.Clear();
+            txtDersAdi.Clear();
+        }
+
         private void Listele()
         {
             con.Open();
@@ -44,6 +50,7 @@ namespace Exceli_Veritani_Olarak_Kullanma
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             Kaydet();
+            Temizle();
         }
 
         private void Form1_Load(object sender, EventArgs e)
