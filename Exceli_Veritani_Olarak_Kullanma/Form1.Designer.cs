@@ -42,6 +42,7 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.BackgroundColor = Color.WhiteSmoke;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(15, 17);
             dataGridView1.Margin = new Padding(4, 4, 4, 4);
@@ -108,6 +109,7 @@
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackColor = Color.FromArgb(184, 218, 241);
             ClientSize = new Size(666, 417);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -117,6 +119,7 @@
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ForeColor = Color.FromArgb(56, 62, 71);
             Margin = new Padding(4, 4, 4, 4);
             MaximizeBox = false;
             Name = "Form1";
