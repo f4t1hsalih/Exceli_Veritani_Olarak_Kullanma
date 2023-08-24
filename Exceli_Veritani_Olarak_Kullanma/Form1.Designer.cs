@@ -33,8 +33,8 @@
             btnKaydet = new Button();
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtSaat = new TextBox();
+            txtDersAdi = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -73,6 +73,7 @@
             btnKaydet.TabIndex = 2;
             btnKaydet.Text = "Kaydet";
             btnKaydet.UseVisualStyleBackColor = true;
+            btnKaydet.Click += btnKaydet_Click;
             // 
             // label1
             // 
@@ -92,19 +93,19 @@
             label2.TabIndex = 4;
             label2.Text = "Ders Adı: ";
             // 
-            // textBox1
+            // txtSaat
             // 
-            textBox1.Location = new Point(530, 109);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(124, 29);
-            textBox1.TabIndex = 5;
+            txtSaat.Location = new Point(530, 109);
+            txtSaat.Name = "txtSaat";
+            txtSaat.Size = new Size(124, 29);
+            txtSaat.TabIndex = 5;
             // 
-            // textBox2
+            // txtDersAdi
             // 
-            textBox2.Location = new Point(530, 144);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(124, 29);
-            textBox2.TabIndex = 6;
+            txtDersAdi.Location = new Point(530, 144);
+            txtDersAdi.Name = "txtDersAdi";
+            txtDersAdi.Size = new Size(124, 29);
+            txtDersAdi.TabIndex = 6;
             // 
             // Form1
             // 
@@ -113,8 +114,8 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(184, 218, 241);
             ClientSize = new Size(666, 417);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtDersAdi);
+            Controls.Add(txtSaat);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnKaydet);
@@ -127,6 +128,8 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Exceli Veritabanı Olarak Kullanma";
+            FormClosed += Form1_FormClosed;
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -139,7 +142,7 @@
         private Button btnKaydet;
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtSaat;
+        private TextBox txtDersAdi;
     }
 }
